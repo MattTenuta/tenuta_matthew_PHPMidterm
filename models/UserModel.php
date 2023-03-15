@@ -20,10 +20,35 @@ public function updateUser($formvalues) {
 	$this->update($statement,$formvalues);
 }
 
+//checkRole function for checking what role the user has
+public function checkRole($formvalues) {
+	$statement = " SET user_role=?";
+	$this->update($statement,$formvalues);
+}
+
+// this function sets user_role to 2 making them an admin
+public function checkAdmin($formvalues) {
+	$statement = " SET user_role=2";
+	$this->update($statement,$formvalues);
+}
+
+// this function sets user_role to 1 making them unregistered
+public function checkAdmin($formvalues) {
+	$statement = " SET user_role=1";
+	$this->update($statement,$formvalues);
+}
+
+// this function sets user_role to 3 making them a guest
+public function checkAdmin($formvalues) {
+	$statement = " SET user_role=3";
+	$this->update($statement,$formvalues);
+}
+
 public function deleteUser($id) {
-	//code to be sure the deletion should happen
 	$this->delete($id);
 }
 
 
 }
+
+?>

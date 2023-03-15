@@ -1,5 +1,7 @@
 <?php
 
+// PDO Implementation is in here
+
 require_once("./includes/config.php");
 
 class Database {
@@ -39,16 +41,6 @@ class Database {
 		$stmt = null;
 	}
 
-	public function search($fld, $str) {
-		$stmt = $this->connection->prepare("SELECT * FROM ".$this->table." WHERE ".$fld." LIKE ?");
-		$stmt->execute(["%$str%"]);
-		$this->rows = $stmt->rowCount();
-		$arr = $stmt->fetchAll(PDO::FETCH_OBJ);
-		if(!$arr) exit('Nothing Found.');
-		return $arr;
-		$stmt = null;
-	}
-
 	protected function create($statement,$values) {
 		$stmt = $this->connection->prepare("INSERT INTO ".$this->table.$statement);
 		$stmt->execute($values);
@@ -69,3 +61,5 @@ class Database {
 
 
 }
+
+?>
