@@ -7,4 +7,3 @@
 		?>
 	</ul>
 </div>
-<div id="content" class="row"><a href="http://localhost:8888/tenuta_matthew_PHPMidterm/index.php?task=create"> create new user</a></div>

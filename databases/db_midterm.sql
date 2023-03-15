@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Mar 04, 2023 at 06:30 PM
+-- Generation Time: Mar 07, 2023 at 08:27 PM
 -- Server version: 5.7.24
 -- PHP Version: 8.1.0
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `db_robproject`
+-- Database: `db_midterm`
 --
 
 -- --------------------------------------------------------
@@ -38,12 +38,9 @@ CREATE TABLE `tbl_roles` (
 --
 
 INSERT INTO `tbl_roles` (`roles_id`, `roles_name`, `roles_desc`) VALUES
-(1, 'Father', 'A father is the male parent of a child. Besides the paternal bonds of a father to his children, the father may have a parental, legal, and social relationship with the child that carries with it certain rights and obligations.'),
-(2, 'Mother', 'A mother is a female parent: mothers nurture and mother children. It\'s also a term for an elderly woman or mother superior. Your mother is the woman who gave birth to you: mothers are parents, the female equivalent of a father.'),
-(3, 'Dog', 'A dog is a domestic mammal of the family Canidae and the order Carnivora. Its scientific name is Canis lupus familiaris. Dogs are a subspecies of the gray wolf, and they are also related to foxes and jackals. Dogs are one of the two most ubiquitous and most popular domestic animals in the world.'),
-(4, 'Baby', 'A very young child, especially one newly or recently born. Babies are always cute and very adorable. We love them because they are full of positive vibes and have a different perspective to view the world'),
-(5, 'Son', 'a boy or man in relation to either or both of his parents. A son should make a father proud to the cusp of envy. A father should wish he had the life his son leads. Lastly, a son should assist and protect the family in the absence of his father. Father and son should exist independently and function interdependently at the same time.'),
-(6, 'Daughter', 'a girl or woman in relation to either or both of her parents. A daughter starts taking care of her parents and adds so much love and joy to their lives. More than a child, she becomes their friend and provides the emotional support that parents often need as they start to grow older. She ensures they have everything that makes their life better and happier.');
+(1, 'Unregistered', 'Unregistered is the base role given  to new users'),
+(2, 'Admin', 'Anyone in the admin role will have full power to do whatever they want'),
+(3, 'Guest', 'The guest role will have limited access to features');
 
 -- --------------------------------------------------------
 
@@ -67,11 +64,11 @@ CREATE TABLE `tbl_users` (
 
 INSERT INTO `tbl_users` (`user_id`, `user_lname`, `user_fname`, `user_username`, `user_password`, `user_photo`, `user_role`) VALUES
 (1, 'Griffin', 'Peter', 'PeterGriffin', 'PeterGriffin1', 'peter,jpg', '1'),
-(3, 'Griffin', 'Lois', 'LoisGriffin', 'LoisGriffin1', 'lois.jpg', '2'),
-(4, 'Griffin', 'Brian', 'BrianGriffin', 'BrianGriffin1', 'brian.jpg', '3'),
-(5, 'Griffin', 'Stewie', 'StewieGriffin', 'StewieGriffin1', 'stewie.jpg', '4'),
-(6, 'Griffin', 'Chris', 'ChrisGriffin', 'ChrisGriffin1', 'chris.jpg', '5'),
-(7, 'Griffin', 'Meg', 'MegGriffin', 'MegGriffin1', 'meg.jpg', '6');
+(3, 'Griffin', 'Lois', 'LoisGriffin', 'LoisGriffin1', 'lois.jpg', '1'),
+(4, 'Griffin', 'Brian', 'BrianGriffin', 'BrianGriffin1', 'brian.jpg', '2'),
+(5, 'Griffin', 'Stewie', 'StewieGriffin', 'StewieGriffin1', 'stewie.jpg', '3'),
+(6, 'Griffin', 'Chris', 'ChrisGriffin', 'ChrisGriffin1', 'chris.jpg', '3'),
+(7, 'Griffin', 'Meg', 'MegGriffin', 'MegGriffin1', 'meg.jpg', '3');
 
 --
 -- Indexes for dumped tables
